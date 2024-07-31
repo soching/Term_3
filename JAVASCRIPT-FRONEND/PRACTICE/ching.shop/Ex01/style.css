@@ -1,0 +1,93 @@
+body {
+    margin: 0;padding: 0;
+    font-family: sans-serif;
+}
+
+.navbar {
+    color: wheat;
+    display: flex;
+    height: 15vh;
+    background-color: rgb(3, 20, 37);
+    position: sticky;
+    top: 0;
+}
+
+.navbar-left {
+    width: 50%;
+}
+
+.navbar-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right,
+ul {
+    width: 100%;
+    display: flex;
+    text-transform: uppercase;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+
+.search-bar input {
+    background: rgb(223, 217, 217);
+    border-radius: 5px;
+}
+
+.header.search-bar,
+input {
+    padding: 20px;
+    width: 50%;
+    margin: 20px;
+    border: none;
+}
+
+.header{
+ 
+    height: 500px;
+}
+.cardproduct {
+    /* padding: 20px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 5px;
+    width: 200px;
+    height: 320px;
+    background-color: rgb(13, 14, 14);
+}
+
+h1 {
+    padding: 10px;
+    font-family: sans-serif;
+    color: transparent;
+    background: linear-gradient(50deg, orange, teal);
+    -webkit-background-clip: text;
+}
+
+.nameandprice {
+    color: wheat;
+    font-family: sans-serif;
+}
+button{
+    margin-left: 100px;
+    background-color:orange;
+    border: 5px solid rgb(53, 43, 43);
+}
+
+p{
+    margin-left: 15px;
+}

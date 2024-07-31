@@ -1,0 +1,31 @@
+- Class in TypeScript can also include the properties, methods, and constructor logic.	
+
+- Constructor is a special function or method that exists inside a class, that is called only once when the object is created. 
+Constructor គឺជាមុខងារពិសេស ឬ method ដែលមាននៅក្នុង class ដែលត្រូវបានហៅតែម្តងគត់នៅពេលដែល object ត្រូវបានបង្កើត។
+
+
+- There are 4 features of OOP:
+	+ encapsulation
+	+ inheritance
+	+ polymorphism
+	+ abstraction
+
+- aggregation refers to the process of combining multiple objects or data sets into a single, unified result.
+	aggregation សំដៅទៅលើដំណើរការនៃការរួមបញ្ចូលគ្នានូវ objectជាច្រើន ឬសំណុំទិន្នន័យទៅជាលទ្ធផលតែមួយ។
+
+- Encapsulation is the bundling of data, and the methods that operate on that data, into a single unit called an object. 
+	Encapsulation គឺជាបណ្តុំនៃទិន្នន័យ និងវិធីសាស្រ្តដែលដំណើរការលើទិន្នន័យនោះចូលទៅក្នុងឯកតាតែមួយហៅថា object។
+
+- Inheritance is a feature that allows one class (the child class) to inherit the properties and methods of another class (the parent class).
+	Inheritance គឺជាមុខងារដែលអនុញ្ញាតឱ្យ class មួយ (the child class) ទទួល properties និង method នៃ class ផ្សេងទៀត (the parent class)។
+
+- Polymorphism is a feature that allows one interface to be used for a general class of actions. 
+This means that the exact method that gets called is determined at runtime, not at compile time. 
+This provides flexibility, as it allows objects of different classes to be treated as objects of a common superclass.
+	Polymorphism គឺជា property ពិសេសដែលអនុញ្ញាតឱ្យ interface មួយត្រូវបានប្រើសម្រាប់ general class of actions។ 
+	នេះមានន័យថាវិធីសាស្ត្រពិតប្រាកដដែលត្រូវបានហៅ ត្រូវបានកំណត់នៅពេលដំណើរការ  មិនមែននៅពេលចងក្រងទេ។ នេះផ្តល់នូវភាពបត់បែន ព្រោះវាអនុញ្ញាតឱ្យ objects of the class  ផ្សេងៗត្រូវបានចាត់ទុកជា object នៃ 	superclass ទូទៅ។
+
+- Abstraction is a feature that allows complex real world problems to be simplified by modelling them in a way that captures only the relevant details. 
+	Abstraction គឺជាលក្ខណៈពិសេសមួយដែលអនុញ្ញាតឱ្យបញ្ហាពិភពលោកពិតស្មុគស្មាញត្រូវបានធ្វើឱ្យសាមញ្ញដោយយកគំរូតាមវិធីដែលចាប់យកតែព័ត៌មានលម្អិតពាក់ព័ន្ធប៉ុណ្ណោះ។
+
+

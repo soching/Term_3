@@ -1,0 +1,6 @@
+
+SAME SAME 
+
+data = actions
+attributes = functions
+properties = method

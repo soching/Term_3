@@ -1,0 +1,14 @@
++ lop by value and index in php
+
+ foreah ($varible as $index => $value){
+
+}
+
++ lop by get only value in php
+
+ foreah ($varible as $value ){
+
+}
+
+
+

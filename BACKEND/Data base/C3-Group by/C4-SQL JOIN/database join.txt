@@ -1,0 +1,4 @@
+innerjoin : id match together.
+leftjoin  : return values to new column.
+rightjoin : the same left join.
+outerjoin : null match or match it take toget‌her.

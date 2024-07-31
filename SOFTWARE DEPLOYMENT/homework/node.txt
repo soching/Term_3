@@ -1,0 +1,5 @@
+1. how to check ip : ip a 
+2. how to ping to google : ping -c 5 8.8.8.8
+3. how to install backages : sudo apt install name 
+4. how to install packages
+  apt install (......) -y

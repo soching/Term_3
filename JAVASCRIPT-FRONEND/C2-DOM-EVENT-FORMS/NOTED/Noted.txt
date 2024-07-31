@@ -1,0 +1,7 @@
+parentElement : left of element 
+firstElementChild : ចាប់យកកូនទីមួយ
+nextElementSibling :ចាប់យកកូនបន្ទាប់​
+children : ចាប់យកកូនទាំងអស់
+querySelector : join something
+target : show code in html when you click on something
+

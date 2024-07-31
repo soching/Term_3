@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <button id="ching">ching</button>
+        <button id="chhunhak">chhunhak</button>
+        <button id="dany">dany</button>
+    </div>
+    <img class="img" src="">
+
+    <script>
+        let btn = document.querySelector('#ching');
+        let btn1 = document.querySelector('#chhunhak');
+        let btn2 = document.querySelector('#dany');
+        let img = document.querySelector('.img');
+        img.style.width="100px";
+
+        btn.addEventListener('mouseover', function () {
+            img.src = 'img/ching.jpg';
+        });
+        btn.addEventListener("mouseout", function () {
+                img.src=""
+        });
+
+        btn1.addEventListener('mouseover', function () {
+            img.src = 'img/hak.jpg';
+        });
+        btn1.addEventListener("mouseout", function () {
+                img.src=""
+        });
+
+        btn2.addEventListener('mouseover', function () {
+            img.src = 'img/dany.jpg';
+        });
+        btn2.addEventListener("mouseout", function () {
+                img.src=""
+        });
+
+
+    </script>
+</body>
+
+</html>

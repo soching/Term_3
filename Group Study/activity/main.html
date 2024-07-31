@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let arrobj = [
+    {name : 'veak', age : 22, province : 'Siem reap'},
+    {name : 'Sanok', age : 12, province: 'KPT'},
+    {name : 'pheaktra', age : 17, province: 'Batbong'},
+    {name : 'Neardy', age : 18, province: 'pp'},
+    {name : 'Chin', age : 18, province : 'banana'}
+    ]
+    for(let arr of arrobj){
+        for(let ar in arr){
+        console.log(ar[name])
+        }
+    }
+
+    let body =document.querySelector('body');
+    let table =document.createElement('table');
+    let thead=document.createElement('thead');
+    table.appendChild(thead);
+    let tr = document.createElement('tr');
+    thead.appendChild(tr);
+    let th =document.createElement('th');
+    th.textContent='name'
+    tr.appendChild(th)
+    let th1 =document.createElement('th');
+    th1.textContent='age'
+    tr.appendChild(th1)
+    let th2 =document.createElement('th');
+    th2.textContent='province'
+    tr.appendChild(th2)
+    body.appendChild(table)
+    console.log(table)
+
+
+    </script>
+</body>  
+</html>

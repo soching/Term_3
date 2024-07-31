@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+.tamplate{
+height: 80vh;
+border: 20px solid tan;
+width: 70%;
+}
+
+.pictures{
+    height: 30vh;
+    display: flex;
+    
+}
+
+.halmet{
+    width: 50%;
+    padding-left: 13%;
+    padding-top: 2%;
+}
+
+.flower{
+    width: 50%;
+    padding-left: 13%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+hr{
+    width: 50%;
+}
+p{
+    padding-left: 1%;
+}
+
+.discription{
+    display: flex;
+    justify-content: center;
+}
+.parents{
+    padding-left: 6%;
+    gap: 20px;
+    height: 10vh;
+    display: flex;
+    
+}
+li{
+    list-style: none;
+}

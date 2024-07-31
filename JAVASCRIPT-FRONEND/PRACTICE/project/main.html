@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body>
+    <div class="container">
+        <h1>product list</h1>
+        <!-- <div class="card">
+            <h3>Phone</h3>
+            <p>Number in stock : 40</p>
+            <p>price :20$</p>
+            <button>Add to Card</button>
+        </div> -->
+    </div>
+    <div class="right">
+        <h2>Add Datas</h2>
+        <div class="adddata">
+            <!-- <div class="display">
+                <span>name</span>
+                <span>price</span>
+                <i class="material-icons">do_not_disturb_on</i>
+                <i class="material-icons">add_circle</i>
+            </div> -->
+        </div>
+    </div>
+    <style>
+        body {
+            font: 1em sans-serif;
+            display: flex;
+        }
+
+        .card {
+            border: none;
+            width: 30%;
+            height: 20%;
+            border-radius: 10px;
+            padding-left: 20px;
+            background-color: yellow;
+        }
+
+        .container {
+            width: 50%;
+        }
+
+        .right{
+            width: 50%;
+        }
+
+        .display {
+            width: 30%;
+            margin: 10px;
+            border: 1px solid black;
+            height: 10%;
+            width: 70%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+    </style>
+    <script>
+        let datas = [
+            // { name: 'speaker', number: 400, price: '520' },
+            // { name: 'computer', number: 405, price: '720' },
+            // { name: 'book', number: 440, price: '200' },
+            // { name: 'milk', number: 420, price: '20' }
+        ]
+        function save() {
+            localStorage.setItem('datas', JSON.stringify(datas));
+        }
+
+        function load() {
+            datas = JSON.parse(localStorage.getItem('datas'))
+        }
+        // save();
+        function display_product() {
+            let productContainer = document.querySelector('.container');
+            for (let product of datas) {
+                let card = document.createElement('div');
+                card.classList = 'card';
+                productContainer.appendChild(card);
+
+                let h3 = document.createElement('h3');
+                h3.textContent = product.name;
+                card.appendChild(h3);
+
+                let pNumber = document.createElement('p');
+                pNumber.textContent = 'Number in stock: ' + product.number;
+                card.appendChild(pNumber);
+
+                let pPrice = document.createElement('p');
+                pPrice.textContent = 'Price: ' + product.price;
+                card.appendChild(pPrice);
+                let btn = document.createElement('button');
+                btn.textContent = 'Add to Card';
+                card.appendChild(btn);
+
+            }
+        }
+        load();
+        display_product();
+
+        // let cardd = document.querySelector('.card')
+        // for (let value in cardd) {
+
+        // }
+        let arr = [];
+        let btns = document.querySelectorAll('button');
+        let add = document.querySelector('.adddata');
+        for (let btn of btns) {
+            let n=0
+            let v =0
+            let process = true;
+            btn.addEventListener('click', function () {
+                
+                let data = btn.parentElement.children[0].textContent
+                let store = add;
+                for (let u of store.children){
+                    if (u.children[0].textContent === data){
+                        process = false
+                        v = u.children[3].textContent;
+                        let dollor = u.children[1].textContent.slice(7)
+                        v +=1
+                        console.log(v)
+                        let totalPrice = u.children[5]
+                        totalPrice.textContent = Number(dollor) * Number(v)
+                    }
+                }
+                if(n===arr.length){
+                    arr.push(btn.parentElement.children[0].textContent)
+                }
+                if (process) {
+                    let divdisplays = document.createElement('div');
+                    divdisplays.classList = 'display';
+                    add.appendChild(divdisplays);
+                    let namespan = document.createElement('span');
+                    namespan.textContent = btn.parentElement.children[0].textContent
+                    divdisplays.appendChild(namespan);
+                    let pricespan = document.createElement('span');
+                    pricespan.textContent = btn.parentElement.children[2].textContent;
+                    divdisplays.appendChild(pricespan);
+
+                    let icon1 = document.createElement('i')
+                    icon1.classList = 'material-icons';
+                    icon1.textContent = 'do_not_disturb_on';
+                    divdisplays.appendChild(icon1)
+
+                    let results = document.createElement('span');
+                    results.id=btn.parentElement.children[0].textContent
+                    results.textContent = 1;
+
+                    divdisplays.appendChild(results)
+                    let icon2 = document.createElement('i')
+                    icon2.classList = 'material-icons';
+                    icon2.textContent = 'add_circle';
+                    divdisplays.appendChild(icon2)
+                    let total = document.createElement('span');
+                    total.textContent = 'total :';
+                    divdisplays.appendChild(total)
+                    
+
+                    let image = document.createElement('img');
+                    image.src = 'img/delete.png';
+                    divdisplays.appendChild(image)
+                    image.style.width = '20px'
+                    image.style.height = '20px'
+                }
+            })
+        }
+        function totalMoey(){
+            
+        }
+        let icon1 =document.querySelector('.material-icons');
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: teal;
+}
+
+img {
+    width:250px;
+    position: absolute;
+    top:250px;
+    transform: scaleX(-1);
+}
+
+.flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}

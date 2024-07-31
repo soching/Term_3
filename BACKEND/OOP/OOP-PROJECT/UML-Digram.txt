@@ -1,0 +1,48 @@
+
+    class Airline {
+        +String name
+        +String headquarter
+        +int fleetSize
+        +int routeCount
+        +double annualRevenue
+        +double operatingCost
+        +addFlight()
+        +cancelFlight()
+        +adjustSchedule()
+    }
+
+    class Airport {
+        +String code
+        +String name
+        +String city
+        +String country
+        +int runwayCount
+        +int passengerVolume
+    }
+
+    class Flight {
+        +String flightNumber
+        +DateTime departureTime
+        +DateTime arrivalTime
+        +int capacity
+        +int bookedSeats
+        +double price
+        +bookSeat()
+        +cancelBooking()
+    }
+
+    class Passenger {
+        +String name
+        +String email
+        +String phoneNumber
+        +String frequentFlyerNumber
+        +bookFlight()
+        +checkIn()
+    }
+
+    class Crew {
+        +String name
+        +String position
+        +int yearsExperience
+        +assignToFlight()
+    }

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body>
+    <div class="container">
+        <h1>product list</h1>
+        <!-- <div class="card">
+            <h3>Phone</h3>
+            <p>Number in stock : 40</p>
+            <p>price :20$</p>
+            <button>Add to Card</button>
+        </div> -->
+    </div>
+    <div class="adddata">
+        <h2>Add Datas</h2>
+        <!-- <div class="display">
+            <span>name</span>
+            <span>price</span>
+            <i class="material-icons">do_not_disturb_on</i>
+            <i class="material-icons">add_circle</i>
+        </div> -->
+    </div>
+    <style>
+        body {
+            font: 1em sans-serif;
+            display: flex;
+        }
+
+        .card {
+            border: none;
+            width: 30%;
+            height: 20%;
+            border-radius: 10px;
+            padding-left: 20px;
+            background-color: yellow;
+        }
+
+        .container {
+            width: 50%;
+        }
+
+        .adddata {
+            width: 50%;
+        }
+
+        .display {
+            width: 30%;
+            margin: 10px;
+            border: 1px solid black;
+            height: 10%;
+            width: 70%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+    </style>
+    <script>
+        let datas = [];
+
+        function saveData() {
+            localStorage.setItem('datas', JSON.stringify(datas));
+        }
+
+        function loadData() {
+            datas = JSON.parse(localStorage.getItem('datas')) || [];
+        }
+
+        function displayProduct() {
+            let productContainer = document.querySelector('.container');
+            for (let product of datas) {
+                let card = createCard(product);
+                productContainer.appendChild(card);
+            }
+        }
+
+        function createCard(product) {
+            let card = document.createElement('div');
+            card.classList = 'card';
+
+            let h3 = document.createElement('h3');
+            h3.textContent = product.name;
+            card.appendChild(h3);
+
+            let pNumber = document.createElement('p');
+            pNumber.textContent = 'Number in stock: ' + product.number;
+            card.appendChild(pNumber);
+
+            let pPrice = document.createElement('p');
+            pPrice.textContent = 'Price: ' + product.price;
+            card.appendChild(pPrice);
+
+            let btn = document.createElement('button');
+            btn.textContent = 'Add to Cart';
+            card.appendChild(btn);
+
+            return card;
+        }
+
+        function handleAddToCart() {
+            let add = document.querySelector('.adddata');
+            let btns = document.querySelectorAll('button');
+
+            for (let btn of btns) {
+                btn.addEventListener('click', function () {
+                    let product = btn.parentElement;
+                    let name = product.querySelector('h3').textContent;
+                    let price = product.querySelector('p:nth-of-type(2)').textContent;
+
+                    let divDisplay = createDisplay(name, price);
+                    add.appendChild(divDisplay);
+                });
+            }
+        }
+
+        function createDisplay(name, price) {
+            let divDisplay = document.createElement('div');
+            divDisplay.classList = 'display';
+
+            let nameSpan = document.createElement('span');
+            nameSpan.textContent = name;
+            divDisplay.appendChild(nameSpan);
+
+            let priceSpan = document.createElement('span');
+            priceSpan.textContent = price;
+            divDisplay.appendChild(priceSpan);
+
+            let icon1 = document.createElement('i');
+            icon1.classList = 'material-icons';
+            icon1.textContent = 'do_not_disturb_on';
+            divDisplay.appendChild(icon1);
+
+            let results = document.createElement('p');
+            results.textContent = '0';
+            divDisplay.appendChild(results);
+
+            let icon2 = document.createElement('i');
+            icon2.classList = 'material-icons';
+            icon2.textContent = 'add_circle';
+            divDisplay.appendChild(icon2);
+
+            let total = document.createElement('p');
+            total.textContent = 'Total:';
+            divDisplay.appendChild(total);
+
+            let image = document.createElement('img');
+            image.src = 'img/delete.png';
+            image.style.width = '20px';
+            image.style.height = '20px';
+            divDisplay.appendChild(image);
+
+            return divDisplay;
+        }
+
+        loadData();
+        displayProduct();
+        handleAddToCart();
+    </script>
+</body>
+
+</html>

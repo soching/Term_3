@@ -1,0 +1,3 @@
+exam
+- first created package: comment : npm init -y
+- second install express: comment: npm i express
